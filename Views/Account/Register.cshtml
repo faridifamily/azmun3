@@ -1,0 +1,24 @@
+﻿@model User
+
+<div asp-validation-summary="ModelOnly">
+</div>
+
+<form method="post">
+    <div class="row">
+        <label asp-for="Email"></label>
+        <input type="text" asp-for="Email" placeholder="User Email" required="required" />
+        <span asp-validation-for="Email"></span>
+    </div>
+    <div class="row">
+        <label asp-for="Mobile"></label>
+        <input type="text" asp-for="Mobile" placeholder="User Mobile" required="required" />
+        <span asp-validation-for="Mobile"></span>
+    </div>
+
+    <button type="submit" asp-controller="Account" asp-action="Register" class="btn btn-primary">ساخت کاربر</button>
+</form>
+
+@section Scripts
+    {
+    <partial name="_ValidationScriptsPartial" />
+}
